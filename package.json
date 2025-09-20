@@ -1,0 +1,45 @@
+{
+  "name": "resource-health-monitor",
+  "version": "1.0.0",
+  "description": "Monitor health and connectivity of internal and external resources",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:electron": "electron .",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "electron": "^35.0.2",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.resource.healthmonitor",
+    "productName": "Resource Health Monitor",
+    "files": [
+      "electron/**/*",
+      "client/build/**/*",
+      "server/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
