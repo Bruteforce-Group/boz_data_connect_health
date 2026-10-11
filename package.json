@@ -16,8 +16,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^9.1.2",
-    "electron": "^39.8.10",
+    "concurrently": "^10.0.6",
+    "electron": "^44.7.0",
     "electron-builder": "^26.15.3"
   },
   "build": {
