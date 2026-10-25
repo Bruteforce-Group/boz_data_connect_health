@@ -16,9 +16,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^9.1.2",
-    "electron": "^39.8.10",
-    "electron-builder": "^26.15.3"
+    "concurrently": "^10.0.6",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0"
   },
   "build": {
     "appId": "com.resource.healthmonitor",
